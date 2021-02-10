@@ -41,5 +41,5 @@ urlpatterns = [
     url(r'^favicon.ico', favicon, name='favicon'),
   
     
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT);
 
