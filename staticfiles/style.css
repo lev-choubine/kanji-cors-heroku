@@ -1,0 +1,16 @@
+#landing{
+    border-radius:100%;
+    
+
+}
+
+#backdrop {
+    background-color: black;
+    text-align: center;
+    padding: 200px;
+}
+
+#headers{
+    color: white;
+    font-size: 55px;
+}
