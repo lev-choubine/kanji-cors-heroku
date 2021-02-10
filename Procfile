@@ -1,1 +1,1 @@
-web: gunicorn kanji-cors.wsgi --log-file -
+web: gunicorn kanji-cors-.wsgi --log-file -
