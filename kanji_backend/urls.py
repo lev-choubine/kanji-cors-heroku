@@ -34,12 +34,12 @@ def favicon(request):
 
     return HttpResponse(icon, content_type="image/x-icon")
 
-    
+
 urlpatterns = [
     path('', include('polls.urls')),
     path('admin/', admin.site.urls),
-    url(r'^', include('favicon.urls')),
-    path('favicon.ico/', RedirectView.as_view(url='static/favicon.ico/')),
+    url(r'^favicon.ico', favicon, name='favicon'),
+  
     
 ]
 
