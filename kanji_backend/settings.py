@@ -21,6 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 import environ
 import dj_database_url
+import favicon
 
 env = environ.Env()
 # reading .env file
