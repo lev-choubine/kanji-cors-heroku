@@ -38,8 +38,8 @@ def favicon(request):
 urlpatterns = [
     path('', include('polls.urls')),
     path('admin/', admin.site.urls),
-    url(r'^favicon.ico', favicon, name='favicon'),
+   
   
     
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT);
+]
 
