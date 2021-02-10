@@ -18,6 +18,23 @@ from django.urls import include, path
 from django.conf.urls import url
 from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.storage import staticfiles_storage
+
+def favicon(request):
+    from textwrap import dedent
+    from django.http import HttpResponse
+    import base64
+
+    icon = """\
+    AAABAAEAEBACAAEAAQCwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAgAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD/
+    /wAA//8AAP//AAD//wAA//8AAP//AAD//wAA"""
+    icon = dedent(icon)
+    icon = base64.b64decode(icon)
+
+    return HttpResponse(icon, content_type="image/x-icon")
+
+    
 urlpatterns = [
     path('', include('polls.urls')),
     path('admin/', admin.site.urls),
