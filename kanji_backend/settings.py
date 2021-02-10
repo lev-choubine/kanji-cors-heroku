@@ -139,6 +139,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+FAVICON_PATH = STATIC_URL + 'images/favicon.png'
 CORS_ORIGIN_ALLOW_ALL = True 
 DJANGO_SETTINGS_MODULE='correctly_settings'
 import django_heroku
