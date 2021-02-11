@@ -35,7 +35,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-export DJANGO_DEBUG=False
+
 ALLOWED_HOSTS = ['kanji-backend.herokuapp.com/', '127.0.0.1:8000/']
 
 
