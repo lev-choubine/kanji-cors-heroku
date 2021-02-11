@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for kanji_backend project.
 
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'polls',
     'corsheaders',
     'favicon',
+    'gunicorn',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -143,5 +145,5 @@ STATICFILES_DIRS = (
 FAVICON_PATH = STATIC_URL + 'images/favicon.png'
 CORS_ORIGIN_ALLOW_ALL = True 
 DJANGO_SETTINGS_MODULE='correctly_settings'
-import django_heroku
+
 django_heroku.settings(locals())
