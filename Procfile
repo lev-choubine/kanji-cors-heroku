@@ -1,2 +1,2 @@
-web: gunicorn kanji_backend.wsgi 
+web: gunicorn kanji_backend.wsgi --log-file -
 
